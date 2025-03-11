@@ -1,0 +1,191 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto; 
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    top: 0; 
+}
+
+
+.step {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #666;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+   
+}
+
+.step:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.step.active {
+    background-color: #0056b3;
+    color: white;
+    font-weight: 600;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: 0;
+}
+
+.cadastro-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    margin-left: 145px;
+    margin-right: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    max-width: 600px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+legend {
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Estilo dos campos de formulário (inputs, selects e textarea) */
+select, input[type="file"], textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #333;
+}
+
+select:focus, input[type="file"]:focus, textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #003d7a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 86, 179, 0.3);
+}
+
+/* Linha divisória entre seções */
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    opacity: 0.3;
+}
+
+/* Efeito ao passar o mouse sobre o container */
+.cadastro-container:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cadastro-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    select, input, textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

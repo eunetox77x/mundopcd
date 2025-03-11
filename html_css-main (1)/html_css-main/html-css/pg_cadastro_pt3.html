@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapa de Conclusão</title>
+    <link rel="stylesheet" href="style_pg_cadastro_pt3.css">
+</head>
+<body>
+    <div class="timeline">
+        <div class="step active">Etapa 1: Dados</div>
+        <div class="step active">Etapa 2: Sobre Você</div>
+        <div class="step active">Etapa 3: Conclusão</div>
+    </div>
+    <div class="cadastro-container">
+        <h1>Conclusão do Cadastro</h1>
+        <form action="conclusao_cadastro.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Envio de Currículo</legend>
+                <label for="curriculo">Anexar Currículo (PDF ou Imagem):</label>
+                <input type="file" id="curriculo" name="curriculo" accept=".pdf, image/*" required>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>Perguntas Pessoais</legend>
+
+                <label for="funcao-alem">Você faria outra função além da sua?</label>
+                <select id="funcao-alem" name="funcao-alem" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                    <option value="depende">Depende</option>
+                </select>
+
+                <label for="trabalho-equipe">Você gosta de trabalhar em equipe?</label>
+                <select id="trabalho-equipe" name="trabalho-equipe" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                    <option value="depende">Depende</option>
+                </select>
+
+                <label for="flexibilidade-horario">Você tem flexibilidade de horário?</label>
+                <select id="flexibilidade-horario" name="flexibilidade-horario" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+                <label for="desafios">Você gosta de enfrentar novos desafios?</label>
+                <select id="desafios" name="desafios" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </fieldset>
+
+            <button type="submit">Finalizar Cadastro</button>
+        </form>
+    </div>
+</body>
+</html>

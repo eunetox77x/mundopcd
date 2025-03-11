@@ -1,0 +1,202 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alteração para garantir alinhamento vertical */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    font-size: 2em;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Animação de suavidade */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Efeito de hover no título */
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto; /* Diminui o espaçamento vertical */
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    top: 0; /* Garante que esteja no topo */
+}
+
+.timeline:hover {
+    width: 65%; 
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #666;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.step:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.step.active {
+    background-color: #0056b3;
+    color: white;
+    font-weight: 600;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: 0;
+}
+
+
+.step:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.step.active:before {
+    background-color: #0056b3;
+}
+
+.cadastro-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Adiciona animação suave de hover */
+}
+
+.cadastro-container:hover {
+    transform: translateY(-10px); /* Efeito de elevação */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento consistente entre os elementos */
+}
+
+form input, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Transição suave */
+}
+
+form input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.2); /* Efeito de foco suave */
+    outline: none;
+}
+
+form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out; /* Transição de cor e escala */
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #003d7a;
+    transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+hr {
+    margin-top: 30px;
+    border: none;
+    border-top: 2px solid #ccc;
+    opacity: 0.7;
+}
+
+/* Responsividade para tablets e telas médias */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .step {
+        width: 80%;
+        margin-bottom: 20px; /* Espaçamento entre os passos na vertical */
+    }
+
+    .cadastro-container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .timeline {
+        width: 100%;
+    }
+
+    .step {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cadastro-container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    form input, form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+}

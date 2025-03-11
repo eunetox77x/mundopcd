@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empresa Parceira</title>
+    <link rel="stylesheet" type="text/css" href="style_pg_empresas.css">
+</head>
+<body>
+    <div class="cadastro-container">
+        <h1>Cadastro de Empresa Parceira</h1>
+        
+        <form action="processa_cadastro.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Informações Básicas da Empresa</legend>
+                <label for="empresa-nome">Nome da Empresa:</label>
+                <input type="text" id="empresa-nome" name="empresa-nome" required>
+
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+
+                <label for="segmento">Segmento de Atuação:</label>
+                <input type="text" id="segmento" name="segmento" required>
+
+                <label for="endereco">Endereço Completo:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="site">Site da Empresa:</label>
+                <input type="url" id="site" name="site">
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações de Contato</legend>
+                <label for="responsavel-nome">Nome do Responsável:</label>
+                <input type="text" id="responsavel-nome" name="responsavel-nome" required>
+
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" required>
+
+                <label for="email">E-mail de Contato:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone de Contato:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </fieldset>
+
+            <fieldset>
+                <legend>Políticas de Inclusão e Diversidade</legend>
+                <label for="politicas-inclusao">Descreva suas políticas de inclusão:</label>
+                <textarea id="politicas-inclusao" name="politicas-inclusao" rows="4" required></textarea>
+
+                <label for="vagas-pcd">Capacidade de Contratação de PCDs:</label>
+                <input type="text" id="vagas-pcd" name="vagas-pcd" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vagas Disponíveis</legend>
+                <label for="numero-vagas">Número de Vagas Abertas:</label>
+                <input type="number" id="numero-vagas" name="numero-vagas" required>
+
+                <label for="descricao-vagas">Descrição das Vagas:</label>
+                <textarea id="descricao-vagas" name="descricao-vagas" rows="4" required></textarea>
+
+                <label for="beneficios">Benefícios Oferecidos:</label>
+                <textarea id="beneficios" name="beneficios" rows="4"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Compromisso com Inclusão</legend>
+                <label>
+                    <input type="checkbox" name="compromisso" required>
+                    Estou comprometido com a inclusão de PCDs no ambiente de trabalho.
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Documentação Adicional</legend>
+                <label for="documentos">Anexar Documentos (opcional):</label>
+                <input type="file" id="documentos" name="documentos">
+            </fieldset>
+
+            <fieldset>
+                <legend>Termos e Condições</legend>
+                <label>
+                    <input type="checkbox" name="termos" required>
+                    Concordo com os termos e condições de uso.
+                </label>
+            </fieldset>
+        <h1>
+            <a href="sucesso_cadastro.html"><input type="submit" value="Cadastrar Empresa"></a>
+        </form>
+
+        <h2>Recursos Visuais e Educativos</h2>
+        <p>Para mais informações sobre a importância da inclusão de PCDs, assista ao nosso <a href="#">vídeo explicativo</a>.</p>
+        <p>Veja também nossa seção de <a href="#">Perguntas Frequentes</a>.</p>
+    </div>
+</body>
+</html>

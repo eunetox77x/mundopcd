@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" type="text/css" href="style_pg_cadastro.css">
+</head>
+<body>
+    <h1>Área de cadastro</h1>
+    
+    <div class="timeline">
+        <div class="step active">Etapa 1: Dados</div>
+        <div class="step">Etapa 2: Sobre Você</div>
+        <div class="step">Etapa 3: Conclusão</div>
+    </div>
+
+    <div class="cadastro-container">
+        <hr>
+        <form method="post" action="cadastro.php">
+            <input type="text" name="username" placeholder="Nome Completo" required>
+            <input type="date" name="dt_nascimento" placeholder="Data de nascimento" required>
+            <input type="text" name="email" placeholder="Digite seu email" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <input type="password" name="confirm_password" placeholder="Confirme sua senha" required>
+            <a href="pg cadastro pt2.html"><button type="submit">Continuar Cadastro</button></a>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+/* Estilo global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f0f4f8; /* Fundo suave */
+    color: #333; /* Cor do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura inteira da tela */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.sucesso-container {
+    background-color: #fff; /* Fundo branco */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    max-width: 600px; /* Largura máxima */
+    width: 100%; /* Largura total */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h1 {
+    color: #28a745; /* Verde para indicar sucesso */
+    font-size: 2.5em; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+p {
+    font-size: 1.2em; /* Tamanho do texto */
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Botão de voltar à página inicial */
+.btn-voltar {
+    display: inline-block; /* Exibe como bloco em linha */
+    padding: 15px 30px; /* Espaçamento interno */
+    background-color: #0056b3; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+    border: none; /* Remove bordas */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de ponteiro */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: 600; /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.3s; /* Animação suave */
+}
+
+.btn-voltar:hover {
+    background-color: #003d7a; /* Cor azul escuro ao passar o mouse */
+    transform: translateY(-3px); /* Eleva o botão */
+}
+/* Estilo do selo de verificação */
+.selo-verificado {
+    font-size: 18px; /* Tamanho do texto */
+    position: relative;
+    display: inline-block;
+    top: -2px; /* Ajuste de posição */
+    transition: transform 0.4s ease-in-out; /* Transição suave para a animação */
+    cursor: pointer; /* Cursor muda para indicar que é interativo */
+}
+
+/* Ícone do selo */
+.selo-verificado:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f058"; /* Ícone de verificado */
+    color: #096dd9; /* Cor do selo */
+    margin-left: 5px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.4s ease-in-out; /* Animação no ícone também */
+}
+
+/* Efeito de animação ao passar o mouse */
+.selo-verificado:hover {
+    transform: scale(1.2); /* Aumenta o tamanho */
+}
+
+.selo-verificado:hover:after {
+    transform: rotate(360deg); /* Gira o ícone ao passar o mouse */
+    color: #1890ff; /* Muda para um azul mais claro */
+}

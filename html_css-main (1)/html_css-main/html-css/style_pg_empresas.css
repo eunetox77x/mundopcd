@@ -1,0 +1,153 @@
+/* Estilo global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f9f9f9; /* Cor de fundo leve */
+    color: #333; /* Cor do texto padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima da tela */
+    padding: 20px; /* Espaçamento interno */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Container do cadastro */
+.cadastro-container {
+    background-color: #fff; /* Fundo branco para o container */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    max-width: 600px; /* Largura máxima */
+    width: 100%; /* Largura total */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+    margin-bottom: 40px; /* Espaçamento entre containers */
+}
+
+/* Efeito ao passar o mouse sobre o container */
+.cadastro-container:hover {
+    transform: translateY(-10px); /* Levanta o container ao passar o mouse */
+}
+
+/* Título */
+h1 {
+    text-align: center; /* Centraliza o título */
+    color: #0056b3; /* Cor do título */
+    font-size: 2.5em; /* Tamanho do texto do título */
+    font-weight: 600; /* Peso do texto */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+}
+
+/* Labels */
+label {
+    font-weight: 500; /* Peso do texto das labels */
+    margin-bottom: 15px; /* Espaço maior abaixo das labels */
+    display: block; /* Exibe como bloco */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo dos campos de formulário (inputs, selects e textarea) */
+select, input[type="file"], input[type="text"], input[type="url"], input[type="email"], input[type="number"], input[type="tel"], textarea {
+    width: 100%; /* Largura total */
+    padding: 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f8f8f8; /* Fundo cinza claro */
+    margin-bottom: 25px; /* Espaço maior abaixo dos campos */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+select:focus, input[type="file"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="tel"]:focus, textarea:focus {
+    border-color: #0056b3; /* Borda azul ao focar */
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2); /* Sombra azul clara */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Botão de envio com animação */
+input[type="submit"] {
+    width: 100%; /* Largura total */
+    padding: 15px; /* Espaçamento interno */
+    background-color: #0056b3; /* Azul padrão */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove borda padrão */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de ponteiro */
+    font-weight: 600; /* Peso do texto */
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.2); /* Sombra do botão */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="submit"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.75s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+input[type="submit"]:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input[type="submit"]:hover {
+    background-color: #003d7a; /* Azul escuro ao passar o mouse */
+    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.3); /* Sombra mais forte */
+}
+
+/* Linha divisória entre seções */
+hr {
+    margin: 40px 0; /* Margens acima e abaixo */
+    border: none; /* Remove borda padrão */
+    border-top: 2px solid #ccc; /* Borda superior cinza */
+    opacity: 0.5; /* Opacidade da borda */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 30px; /* Ajuste de padding */
+    }
+
+    h1 {
+        font-size: 2em; /* Tamanho do título para telas menores */
+    }
+
+    input[type="submit"] {
+        font-size: 14px; /* Reduz o tamanho do texto do botão em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .cadastro-container {
+        padding: 20px; /* Ajuste de padding */
+        border-radius: 15px; /* Bordas arredondadas para telas pequenas */
+    }
+
+    select, input, textarea {
+        padding: 12px; /* Ajuste de padding */
+        font-size: 14px; /* Tamanho da fonte para telas menores */
+    }
+
+    h1 {
+        font-size: 1.6em; /* Tamanho do título para telas pequenas */
+    }
+
+    input[type="submit"] {
+        padding: 12px; /* Ajuste no padding do botão para telas pequenas */
+    }
+}
